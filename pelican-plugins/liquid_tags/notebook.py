@@ -303,7 +303,7 @@ def notebook(preprocessor, tag, markup):
     (body, resources) = exporter.from_notebook_node(nb_json)
 
     # if we haven't already saved the header, save it here.
-    if not notebook.header_saved:
+    if not os.path.exists('_nb_header.html') and not notebook.header_saved:
         print ("\n ** Writing styles to _nb_header.html: "
                "this should be included in the theme. **\n")
 
@@ -317,7 +317,10 @@ def notebook(preprocessor, tag, markup):
 
     # this will stash special characters so that they won't be transformed
     # by subsequent processes.
+    body = body.replace('<div class=" highlight hl-ipython3"><pre>',
+                        '<div class="highlight-ipynb"><pre class="ipynb">')
     body = preprocessor.configs.htmlStash.store(body, safe=True)
+
     return body
 
 notebook.header_saved = False
