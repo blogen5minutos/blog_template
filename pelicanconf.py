@@ -5,7 +5,7 @@ import os
 
 AUTHOR = u'raul'
 SITENAME = u'blog en 5 minutos'
-SITESUBTITLE = u'Demo para pyconar 2015'
+SITESUBTITLE = u'Demo blog'
 SITEURL = ''
 
 #PATH = 'content'
