@@ -1,5 +1,5 @@
 Title: Batman, ecuaciones y python
-Date: 2015-10-24
+Date: 2016-05-19
 Category: Python
 Tags: python, matematica, programacion, batman
 Author: Raul E. Lopez Briega
